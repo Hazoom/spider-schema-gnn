@@ -138,7 +138,7 @@ def fix_number_value(ex: JsonDict):
             continue
 
         i_val_end = i_val
-        while i_val + 1 < len(ex['query_toks']) and \
+        while i_val_end + 1 < len(ex['query_toks']) and \
                 i_no_val + 1 < len(ex['query_toks_no_value']) and \
                 ex['query_toks'][i_val_end + 1].lower() != ex['query_toks_no_value'][i_no_val + 1].lower():
             i_val_end += 1
